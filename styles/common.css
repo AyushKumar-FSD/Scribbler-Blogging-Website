@@ -1,0 +1,141 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.title {
+    font-family: 'Montez', cursive;
+    font-size: 40px;
+    color: blue;
+}
+
+.subtitle {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 14px;
+}
+
+.auth-buttons .blue-btn {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.auth-buttons .blue-btn:hover {
+    background-color: #0033cc;
+    transform: translateY(-1px);
+}
+
+/* MODAL */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    background: white;
+    width: 400px;
+    position: relative;
+    border-radius: 6px;
+}
+
+.modal-content.large {
+    width: 70%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.modal input,
+.modal textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    background: #f2f2f2;
+    border: none;
+    font-family: Arial, sans-serif;
+}
+
+.modal textarea {
+    height: 290px;
+}
+
+.switch-text {
+    text-align: center;
+}
+
+.switch-text a {
+    color: blue;
+    text-decoration: none;
+}
+
+/* for content textarea */
+.modal-content.large {
+    width: 70%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.modal-content.large {
+    overflow-y: auto;
+}
+
+/* Styles for SignUp and SignIn Modal */
+#signupModal .green-btn {
+    background: #5cb85c;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#signupModal .modal-content {
+    padding: 40px;
+}
+
+#signinModal .green-btn {
+    background: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+
+#signinModal .modal-content {
+    padding: 40px;
+}
+
+.modal input,
+.modal textarea,
+.modal button {
+    box-sizing: border-box;
+}
