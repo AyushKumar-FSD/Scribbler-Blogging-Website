@@ -1,0 +1,124 @@
+body {
+    background-color: #ffeedd;
+}
+
+/* POSTS GRID */
+.posts-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 40px;
+}
+
+/* POST CARD */
+.post-card {
+    display: flex;
+    background-color: #e8e8e8;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.post-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* AUTHOR */
+.post-author {
+    background-color: white;
+    width: 130px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* CONTENT */
+.post-content {
+    padding: 20px;
+    position: relative;
+    flex: 1;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post-header p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* LIMIT POST CONTENT TO 3 LINES (FIXED) */
+.post-content>p {
+    display: -webkit-box;
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* ICONS */
+.delete-icon {
+    cursor: pointer;
+    color: gray;
+}
+
+.more-icon {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+/* CENTER LAST POST IF ODD */
+.posts-container>.post-card:last-child:nth-child(odd) {
+    grid-column: 1 / span 2;
+    justify-self: center;
+    width: 50%;
+}
+
+/* Modal box text */
+#deleteModal .modal-content p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Modal */
+.modal-content {
+    padding: 20px;
+}
+
+/* Button container */
+#deleteModal .modal-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+
+}
+
+/* YES button (green) — scoped ONLY to delete modal */
+#deleteModal .green-btn {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 8px 22px;
+    cursor: pointer;
+}
+
+/* NO button (red) — scoped ONLY to delete modal */
+#deleteModal .red-btn {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 8px 22px;
+    cursor: pointer;
+}
+
+/* YES & NO modal alignment */
+#warning {
+    text-align: center;
+}

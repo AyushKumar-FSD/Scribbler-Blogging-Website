@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Post</title>
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css?family=Montez&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/post.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <div class="title">ScriBBler</div>
+            <div class="subtitle">Explore, Imagine, Create</div>
+        </div>
+
+        <div class="auth-buttons">
+            <button class="blue-btn" id="signupBtn">Sign Up</button>
+            <button class="blue-btn" id="signinBtn">Sign In</button>
+        </div>
+    </header>
+
+    <!-- SIGN UP MODAL -->
+    <div class="modal" id="signupModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signupModal')">
+                <i class="fas fa-times"></i>
+            </span>
+            <h2>Get Started</h2>
+            <hr>
+            <form>
+                <label>Name</label>
+                <input type="text" placeholder="Enter your name" required>
+
+                <label>Username</label>
+                <input type="text" placeholder="Enter your username" required>
+
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" required>
+
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Re-enter your password" required>
+
+                <button type="submit" class="green-btn">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SIGN IN MODAL -->
+    <div class="modal" id="signinModal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('signinModal')">
+                <i class="fas fa-times"></i>
+            </span>
+            <h2>Welcome Back!</h2>
+            <hr>
+            <form>
+                <label>Username</label>
+                <input type="text" placeholder="Enter your username" required>
+
+                <label>Password</label>
+                <input type="password" placeholder="Enter your password" required>
+
+                <button type="submit" class="green-btn">Sign In</button>
+            </form>
+            <p class="switch-text">
+                Not a member?
+                <a href="javascript:void(0)" onclick="switchToSignup()">Sign Up</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- POST CONTAINER -->
+    <div class="post-container">
+
+        <h1 id="postTitle">Everything you should know about ‘module’ & ‘require’ in Node.js</h1>
+
+        <div class="post-meta">
+            <span class="author">Srishti Gupta</span>
+            <button id="editBtn" class="edit-btn">
+                Edit <i class="fas fa-edit"></i>
+            </button>
+        </div>
+
+        <p id="postContent">
+            Node.js treats each JavaScript file as a separate module. For instance, if you have a file containing some
+            code
+            and this file is named xyz.js, then this file is treated as a module in Node, and you can say that you’ve
+            created
+            a module named xyz. Let’s take an example to understand this better...
+        </p>
+
+        <!-- LIKE SECTION -->
+        <button id="likeBtn" class="like-btn">
+            <i class="fas fa-thumbs-up"></i> Like
+        </button>
+        <p id="likeText">Be the first one to like this!</p>
+
+        <!-- COMMENT SECTION -->
+        <textarea id="commentInput" placeholder="Leave a comment..."></textarea>
+        <button id="commentBtn" class="comment-btn">Comment</button>
+
+        <h3>All Comments</h3>
+        <div id="commentsContainer"></div>
+
+    </div>
+
+    <!-- JS -->
+    <script src="../scripts/common.js"></script>
+    <script src="../scripts/post.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    background: url('../images/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+.center-buttons {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.yellow-btn {
+    background: #d9b23a;
+    border: 2px solid #c5b7b7; 
+    padding: 15px 25px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.yellow-btn:hover {
+    background: #caa52f;
+}
+
+/* CREATE POST BUTTON SIZE */
+#createPostModal .green-btn {
+    background: #5cb85c;
+    color: white;
+    border: none;
+    width: auto;          /* remove full width */
+    padding: 12px 40px;   /* match expected size */
+    display: block;
+    margin: 20px auto 0;  /* center horizontally */
+    cursor: pointer;
+}
+
+.modal-content {
+    padding: 40px;
+}
+
+.modal-content.large hr {
+    border: none;
+    border-top: 1px solid #999;
+    margin: 5px 0 15px;
+}
+

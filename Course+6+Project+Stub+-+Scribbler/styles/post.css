@@ -1,0 +1,83 @@
+/* PAGE LAYOUT */
+.post-container {
+    width: 70%;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+}
+
+/* TITLE */
+#postTitle {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* AUTHOR + EDIT BUTTON */
+.post-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.author {
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+/* EDIT / SAVE BUTTON */
+.edit-btn {
+    background: #ff3058;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+/* POST CONTENT */
+#postContent {
+    line-height: 1.6;
+}
+
+/* EDIT MODE */
+.editable {
+    border: 2px solid pink;
+    padding: 10px;
+}
+
+/* LIKE BUTTON */
+.like-btn {
+    background: #ff3058;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* COMMENTS */
+#commentInput {
+    width: 100%;
+    height: 80px;
+    margin-top: 15px;
+}
+
+.comment-btn {
+    background: #ff3058;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* COMMENTS LIST */
+#commentsContainer {
+    background: #e6e6e6;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.comment {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
